@@ -57,3 +57,5 @@ if __name__ == "__main__":
 
     data_transformation = DataTransfromation()
     data_transformation.initiate_data_transfromation(train_data, test_data)
+    
+    

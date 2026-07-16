@@ -1,7 +1,7 @@
 import os
 import sys
 from dataclasses import dataclass
-
+from catboost import CatBoostRegressor
 from sklearn.linear_model import LinearRegression
 from sklearn.ensemble import (
     RandomForestRegressor,
@@ -11,7 +11,7 @@ from sklearn.ensemble import (
 from sklearn.tree import DecisionTreeRegressor
 from sklearn.neighbors import KNeighborsRegressor
 from sklearn.metrics import r2_score
-
+from xgboost import XGBRegressor
 from src.exception import CustomException
 from src.logger import logging
 from src.utils import save_object
@@ -52,6 +52,8 @@ class ModelTrainer:
                 "Gradient Boosting": GradientBoostingRegressor(),
                 "AdaBoost": AdaBoostRegressor(),
                 "K-Nearest Neighbors": KNeighborsRegressor(),
+                "CatBoost": CatBoostRegressor(verbose=False),
+                "XGBoost": XGBRegressor()
             }
 
             model_report = self.evaluate_models(
