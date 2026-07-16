@@ -12,11 +12,11 @@ class PredictPipeline:
 
     def predict(self, features: pd.DataFrame):
         try:
-            model_path = os.path.join('artifacts', 'model.pkl')
-            preprocessor_path = os.path.join('artifacts', 'preprocessor.pkl')
+            model_path = 'artifacts\model.pkl'
+            preprocessor_path = 'artifacts\preprocessor.pkl'
 
-            model = load_object(model_path)
-            preprocessor = load_object(preprocessor_path)
+            model = load_object(file_path=model_path)
+            preprocessor = load_object(file_path=preprocessor_path)
 
             data_scaled = preprocessor.transform(features)
             predictions = model.predict(data_scaled)
@@ -36,8 +36,8 @@ class CustomData:
         parental_level_of_education: str,
         lunch: str,
         test_preparation_course: str,
-        reading_score: float,
-        writing_score: float,
+        reading_score: int,
+        writing_score: int,
     ):
         self.gender = gender
         self.race_ethnicity = race_ethnicity
