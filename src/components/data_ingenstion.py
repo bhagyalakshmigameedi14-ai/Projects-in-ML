@@ -50,12 +50,15 @@ class DataIngestion:
 
 if __name__ == "__main__":
     from src.components.data_transfromation import DataTransfromation
-    from src.components.data_transfromation import DataTransfromationConfig
 
     obj = DataIngestion()
     train_data, test_data = obj.initiate_data_ingestion()
 
     data_transformation = DataTransfromation()
     data_transformation.initiate_data_transfromation(train_data, test_data)
+
+    print("Data ingestion completed successfully")
+    print(f"Train data: {train_data}")
+    print(f"Test data: {test_data}")
     
     
