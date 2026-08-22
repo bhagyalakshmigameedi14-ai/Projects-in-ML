@@ -1,1 +1,84 @@
-<h1>Welcome to the ML Project</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to ML Project</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #6366f1;
+            --primary-hover: #4f46e5;
+            --bg-gradient: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            --card-bg: rgba(255, 255, 255, 0.95);
+            --text-main: #1f2937;
+            --text-muted: #6b7280;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-gradient);
+            min-height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--text-main);
+            padding: 2rem 1rem;
+            box-sizing: border-box;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 24px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            padding: 4rem 3rem;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            text-align: center;
+            max-width: 500px;
+        }
+
+        h1 {
+            margin: 0 0 1rem 0;
+            font-size: 2.2rem;
+            color: var(--text-main);
+            font-weight: 700;
+            letter-spacing: -0.025em;
+        }
+
+        p {
+            margin: 0 0 2rem 0;
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            line-height: 1.5;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            color: #ffffff;
+            background-color: var(--primary);
+            border-radius: 12px;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 6px rgba(99, 102, 241, 0.25);
+        }
+
+        .btn:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(99, 102, 241, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>Welcome to the ML Project</h1>
+        <p>This is a student exam performance predictor application built with machine learning.</p>
+        <a href="/predict" class="btn">Get Started</a>
+    </div>
+</body>
+</html>
